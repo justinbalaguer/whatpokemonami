@@ -1,11 +1,12 @@
 # To:Do
 
-* [ ] get user birthday
-* [ ] convert year in birthday to last 2 digits
-* [ ] add month+date+converted year
-* [ ] get pokemon name with PokeApi endpoint: https://pokeapi.co/api/v2/pokedex/kanto using the total birthday
-* [ ] get pokemon picture
-* [ ] show to frontend
+* [x] get user birthday
+* [x] convert year in birthday to last 2 digits
+* [x] add month+date+converted year
+* [x] get pokemon name with PokeApi endpoint: https://pokeapi.co/api/v2/pokedex/kanto using the total birthday
+* [x] get pokemon picture endpoint: https://pokeres.bastionbot.org/images/pokemon/{using-total-birthday}.png
+* [x] show to frontend
+* [ ] host
 
 # Design
 
