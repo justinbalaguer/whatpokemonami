@@ -6,7 +6,7 @@
 * [x] get pokemon name with PokeApi endpoint: https://pokeapi.co/api/v2/pokedex/kanto using the total birthday
 * [x] get pokemon picture endpoint: https://pokeres.bastionbot.org/images/pokemon/{using-total-birthday}.png
 * [x] show to frontend
-* [ ] host
+* [x] host
 
 # Design
 
