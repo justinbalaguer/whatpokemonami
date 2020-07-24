@@ -4,6 +4,13 @@ import './style/style.scss';
 /* axios */
 import axios from 'axios';
 
+/* bootstrap */
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button,Form} from 'react-bootstrap';
+
+/* icons */
+import {FaFacebook,FaGithub,FaTwitter} from 'react-icons/fa';
+
 const App = () => {
   const [date, setDate] = useState({
     birthdate: ''
@@ -26,7 +33,7 @@ const App = () => {
   
   const PokemonImage = () => {
     return(
-      <img src={pokeImg} alt="pokemon" load={`lazy`}/>
+      <img src={pokeImg} alt="pokemon" load={`lazy`} width={`300em`} height={`auto`} />
     );
   }
 
@@ -48,14 +55,46 @@ const App = () => {
       console.error(error);
     }
   }
+
+  const reset = () => {
+    setPokedex({pokeName:'',pokeImg:''});
+  }
+
   return (
     <div className="App">
-      <input type="date" id="birthdate" name="birthdate" onChange={convertBirthday} />
-      <button type="button" id="submit" onClick={startQuery} disabled={isDisabled}>Submit</button>
-      <div>
-        <h1 id="pokemon-name">{pokeName}</h1>
-        {pokeImg ? <PokemonImage /> : ''}
+      <header>
+        <h1>What Pokémon Am I?</h1>
+      </header>
+      <div className="content">
+        {pokeName ? (
+          <div className="main">
+            <h1 id="pokemon-name">{pokeName}</h1>
+            {pokeImg ? <PokemonImage /> : ''}
+            <div className="action">
+              <Button size="lg" variant="info" id="reset" onClick={reset}>Reset</Button>
+            </div>
+          </div>
+        ) : (
+          <div className="main-container">
+            <div className="who">
+              <img src="https://www.netclipart.com/pp/m/70-704918_pokemon-silhouette-png-whos-that-pokemon-pikachu.png" alt="pikachu silhouette" height={`auto`} width={`200em`}/>
+            </div>
+            <div className="birthdate-container">
+              <span>Enter your birthdate</span>
+              <Form.Control size="lg" type="date" id="birthdate" name="birthdate" onChange={convertBirthday} />
+            </div>
+            <div className="action">
+              <Button size="lg" variant="info" id="submit" onClick={startQuery} disabled={isDisabled}>Submit</Button>
+            </div>
+            <div className="icons">
+              <span className="icon"><a href="https://facebook.com/devjstn/" target="_blank" rel="noopener noreferrer"><FaFacebook/></a></span>
+              <span className="icon"><a href="https://github.com/justinbalaguer/" target="_blank" rel="noopener noreferrer"><FaGithub/></a></span>
+              <span className="icon"><a href="https://twitter.com/devjstn/" target="_blank" rel="noopener noreferrer"><FaTwitter/></a></span>
+            </div>
+          </div>
+        )}
       </div>
+      <footer>Made with <span role="img" aria-label="heart emoji">💜</span> by <a href="https://justinbalaguer.github.io/">Justin Balaguer</a></footer>
     </div>
   );
 }

@@ -10,16 +10,10 @@
 
 # Design
 
-* [ ] 1 page / 100vh / centered
-* [ ] top - title (whatpokemonami)
-* [ ] center - input for birthday
-* [ ] center(2) - button (generate/check/submit?)
-* [ ] bottom - Made with 💜 by Justin
-* [ ] upon clicking button add basic validation
-* [ ] show preloader (loading/wait)
-* [ ] hide first front page/getting user data
-* [ ] show the result
-  * [ ] top - title
-  * [ ] center - pokemon name
-  * [ ] center(2) - pokemon image
-  * [ ] bottom - Made with 💜 by Justin
+* [x] 1 page / 100vh / centered
+* [x] top - title (whatpokemonami)
+* [x] center - input for birthday
+* [x] center(2) - button (generate/check/submit?)
+* [x] bottom - Made with 💜 by Justin
+* [x] hide first front page/getting user data
+* [x] show the result
